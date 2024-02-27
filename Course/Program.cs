@@ -1,4 +1,5 @@
-﻿using System; 
+﻿using System;
+using System.Globalization;
 
 namespace Course
 {
@@ -6,32 +7,17 @@ namespace Course
     {
         static void Main(string[] args)
         {
-            Comercio[] vect = new Comercio[10]; 
+            string[] multiplos = Console.ReadLine().Split(' ');
+            int a = int.Parse(multiplos[0]);
+            int b = int.Parse(multiplos[1]);
 
-            Console.Write("Quantos quartos serão alugados?: ");
-            int n = int.Parse(Console.ReadLine());
-
-            for (int i = 1; i <= n; i++)
+            if (a % b == 0 || b % a == 0)
             {
-                Console.WriteLine();
-                Console.WriteLine($"Aluguel #{i}:");
-                Console.Write("Nome: ");
-                string nome = Console.ReadLine();
-                Console.Write("Email: ");
-                string email = Console.ReadLine();
-                Console.Write("Quarto: ");
-                int quarto = int.Parse(Console.ReadLine());
-                vect[quarto] = new Comercio(nome, email);
+                Console.WriteLine("Sao Multiplos");
             }
-
-            Console.WriteLine();
-            Console.WriteLine("Quartos ocupados:");
-            for (int i = 0; i < 10; i++)
+            else
             {
-                if (vect[i] != null)
-                {
-                    Console.WriteLine(i + ": " + vect[i]);
-                }
+                Console.WriteLine("Nao sao Multiplos ");
             }
         }
     }

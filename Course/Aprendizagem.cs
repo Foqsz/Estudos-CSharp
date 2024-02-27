@@ -8,18 +8,31 @@ namespace Course
 {
     internal class Aprendizagem
     {
-        public int yes { get; private set; }
-        public double yes1 { get; private set; }
-        public string yes3 { get; set; }
-
-        public Aprendizagem(int yes, double yes1)
+        public string Cliente { get; set; }
+        public string Lista { get; set; }
+        public int CompraA { get; private set; } 
+        public Aprendizagem()
         {
-            yes = yes;
-            yes1 = yes1;
         }
-        public Aprendizagem(int yes, double yes1, string yes3) : this(yes, yes1)
+
+        public Aprendizagem(string cliente, int compraA)
         {
-            yes3 = yes3;
+            Cliente = cliente;
+            CompraA = compraA;
+        }
+
+        public Aprendizagem(string cliente, int compraA, string lista) : this(cliente, compraA)
+        { 
+            Lista = lista;
+        }
+         
+
+        public override string ToString()
+        {
+            return Lista
+            + " Você comprou, "
+            + CompraA
+            + " Obrigado e volte sempre.";
         }
     }
 }
