@@ -5,9 +5,9 @@ namespace Course.Entities
 {
     internal class Order
     {
-        public int Id { get; set; }
-        public DateTime Moment { get; set; }
-        public OrderStatus Status { get; set; }
+        public int Id { get; set; } // id do pedido
+        public DateTime Moment { get; set; } // instante do pedido 
+        public OrderStatus Status { get; set; } // status do pedido
 
 
         public override string ToString()

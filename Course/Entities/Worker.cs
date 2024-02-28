@@ -35,11 +35,11 @@ namespace Course.Entities
         public double Income(int year, int month)
         {
             double sum = BaseSalary;
-            foreach (HourContract contract in Contracts)
+            foreach (HourContract contract in Contracts) // para cada HourContract na minha lista de contratos
             {
-                if (contract.Date.Year == year && contract.Date.Month == month)
+                if (contract.Date.Year == year && contract.Date.Month == month) // se o ano do meu contrato for igual ao ano do contrato que recebi como argumento, significa que esse contrato vai entrar na soma
                 {
-                    sum += contract.TotalValue();
+                    sum += contract.TotalValue(); // soma recebe ela mesmo + valor do contrato
                 }
             }
             return sum;

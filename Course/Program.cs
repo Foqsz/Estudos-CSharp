@@ -15,7 +15,7 @@ namespace Course
             Console.Write("Name: ");
             string name = Console.ReadLine();
             Console.Write("Level (Junior/MidLevel/Senior): ");
-            WorkerLevel level = Enum.Parse<WorkerLevel>(Console.ReadLine());
+            WorkerLevel level = Enum.Parse<WorkerLevel>(Console.ReadLine()); // para usar tipo string
             Console.Write("Base Salary: ");
             double baseSalary = double.Parse(Console.ReadLine(), CultureInfo.InvariantCulture);
 
@@ -29,7 +29,7 @@ namespace Course
             {
                 Console.WriteLine($"Enter #{i} contract data");
                 Console.Write("Date (DD/MM/YYYY): ");
-                DateTime date = DateTime.Parse(Console.ReadLine());
+                DateTime date = DateTime.Parse(Console.ReadLine()); // metodo parse aceita dia/mes/ano
                 Console.Write("Value per hour: ");
                 double valuePerHour = double.Parse(Console.ReadLine(), CultureInfo.InvariantCulture);
                 Console.Write("Duration (hours): ");
