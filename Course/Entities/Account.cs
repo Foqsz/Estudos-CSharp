@@ -1,7 +1,7 @@
 ﻿  
 namespace Course.Entities
 {
-    internal class Account
+    internal abstract class Account
     {
         public int Number { get; protected set; } // protected permite que eu acesse em uma sub classe.
         public string Holder { get; protected set; } 
