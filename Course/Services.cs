@@ -6,7 +6,7 @@ using System.IO;
 
 namespace Course
 {
-    class Program
+    class Services
     {
         static void Main(string[] args)
         {
