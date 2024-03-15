@@ -1,7 +1,8 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using Course.Entities;
+using Course.Services;
+using System;
 using System.Globalization;
-using Course.Entities;
+using System.IO;
 
 namespace Course
 {
@@ -9,40 +10,27 @@ namespace Course
     {
         static void Main(string[] args)
         {
-            List<Employee> list = new List<Employee>();
+            Console.WriteLine("Enter rental data");
+            Console.Write("Car Model: ");
+            string model = Console.ReadLine();
+            Console.Write("Pickup (dd/MM/yyyy hh:mm): ");
+            DateTime start = DateTime.ParseExact(Console.ReadLine(), "dd/MM/yyyy HH:mm", CultureInfo.InvariantCulture);
+            Console.Write("Return (dd/MM/yyyy hh:mm): ");
+            DateTime finish = DateTime.ParseExact(Console.ReadLine(), "dd/MM/yyyy HH:mm", CultureInfo.InvariantCulture);
 
-            Console.Write("Enter the number of employees : ");
-            int n = int.Parse(Console.ReadLine());
+            Console.Write("Enter price per hour: ");
+            double hour = double.Parse(Console.ReadLine(), CultureInfo.InvariantCulture);
+            Console.Write("Enter price per day: ");
+            double day = double.Parse(Console.ReadLine(), CultureInfo.InvariantCulture);
 
-            for (int i = 1; i <= n; i++)
-            {
-                Console.WriteLine($"Employee #{i} data:");
-                Console.Write("Outsourced (y/n)? ");
-                char ch = char.Parse(Console.ReadLine()); // usaremos a variavel char para responder a pergunta acima, y ou n.
-                Console.Write("Name: ");
-                string name = Console.ReadLine();
-                Console.Write("Hours: ");
-                int hours = int.Parse(Console.ReadLine());
-                Console.Write("Value per hour: ");
-                double valuePerHour = double.Parse(Console.ReadLine(), CultureInfo.InvariantCulture);
-                if (ch == 'y') // leitura: se a variavel ch for igual a letra y em 'ch', ele vai ler.
-                {
-                    Console.Write("Additional charge: ");
-                    double additionalCharge = double.Parse(Console.ReadLine(), CultureInfo.InvariantCulture);
-                    list.Add(new OutsourcedEmployee(name, hours, valuePerHour, additionalCharge));
-                }
-                else
-                {
-                    list.Add(new Employee(name, hours, valuePerHour));
-                }
-            }
-            Console.WriteLine();
-            Console.WriteLine("PAYMENTS:");
-            foreach (Employee emp in list) // para cada funcionario(employee emp) na minha lista list
-            {
-                Console.WriteLine(emp.Name + " - $ " + emp.Payment().ToString("F2", CultureInfo.InvariantCulture));
-            }
+            CarRental carRental = new CarRental(start, finish, new Vehicle(model)); // instanciado
+
+            RentalService rentalService = new RentalService(hour, day, new BrasilTaxService()); // instanciado
+
+            rentalService.ProcessInvoice(carRental);
+
+            Console.WriteLine("INVOICE: ");
+            Console.WriteLine(carRental.Invoice);
         }
     }
 }
- 
