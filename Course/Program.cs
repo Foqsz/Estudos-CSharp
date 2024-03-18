@@ -1,8 +1,7 @@
-﻿using Course.Entities;
-using Course.Services;
-using System;
+﻿using System;
 using System.Globalization;
-using System.IO;
+using Course.Entities;
+using Course.Services;
 
 namespace Course
 {
@@ -10,27 +9,27 @@ namespace Course
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Enter rental data");
-            Console.Write("Car Model: ");
-            string model = Console.ReadLine();
-            Console.Write("Pickup (dd/MM/yyyy hh:mm): ");
-            DateTime start = DateTime.ParseExact(Console.ReadLine(), "dd/MM/yyyy HH:mm", CultureInfo.InvariantCulture);
-            Console.Write("Return (dd/MM/yyyy hh:mm): ");
-            DateTime finish = DateTime.ParseExact(Console.ReadLine(), "dd/MM/yyyy HH:mm", CultureInfo.InvariantCulture);
 
-            Console.Write("Enter price per hour: ");
-            double hour = double.Parse(Console.ReadLine(), CultureInfo.InvariantCulture);
-            Console.Write("Enter price per day: ");
-            double day = double.Parse(Console.ReadLine(), CultureInfo.InvariantCulture);
+            Console.WriteLine("Enter contract data");
+            Console.Write("Number: ");
+            int contractNumber = int.Parse(Console.ReadLine());
+            Console.Write("Date (dd/MM/yyyy): ");
+            DateTime contractDate = DateTime.ParseExact(Console.ReadLine(), "dd/MM/yyyy", CultureInfo.InvariantCulture);
+            Console.Write("Contract value: ");
+            double contractValue = double.Parse(Console.ReadLine(), CultureInfo.InvariantCulture);
+            Console.Write("Enter number of installments: ");
+            int months = int.Parse(Console.ReadLine());
 
-            CarRental carRental = new CarRental(start, finish, new Vehicle(model)); // instanciado
+            Contract myContract = new Contract(contractNumber, contractDate, contractValue);
 
-            RentalService rentalService = new RentalService(hour, day, new BrasilTaxService()); // instanciado
+            ContractService contractService = new ContractService(new PaypalService());
+            contractService.ProcessContract(myContract, months);
 
-            rentalService.ProcessInvoice(carRental);
-
-            Console.WriteLine("INVOICE: ");
-            Console.WriteLine(carRental.Invoice);
+            Console.WriteLine("Installments:");
+            foreach (Installment installment in myContract.Installments)
+            {
+                Console.WriteLine(installment);
+            }
         }
     }
 }
