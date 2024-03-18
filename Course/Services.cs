@@ -5,7 +5,7 @@ using Course.Services;
 
 namespace Course
 {
-    class Program
+    class Services
     {
         static void Main(string[] args)
         {
