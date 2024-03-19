@@ -5,7 +5,7 @@ using Course.Entities;
 
 namespace Course
 {
-    class Program
+    class ExercicioHerança
     {
         static void Main(string[] args)
         {
