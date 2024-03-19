@@ -1,8 +1,7 @@
-﻿using System;
+﻿using Course.Devices;
+using System;
 using System.Globalization;
-using Course.Entities; 
-using Course.Entities.Enums;
-using Course.Services;
+using Course.Entities;
 
 namespace Course
 {
@@ -10,11 +9,29 @@ namespace Course
     {
         static void Main(string[] args)
         {
-            IShape s1 = new NewCircle() { Radius = 2.0, Cor = Cor.White };
-            IShape s2 = new NewRectangle() { Width = 3.5,  Height = 4.2, Cor = Cor.Black };
+            string path = @"C:\Users\vinic\AppData\Local\Temp\Estudo.txt";
 
-            Console.WriteLine(s1);
-            Console.WriteLine(s2);
+            try
+            {
+                using (StreamReader sr = File.OpenText(path))
+                {
+                    List<NewEmployee2> list = new List<NewEmployee2>();
+                    while (!sr.EndOfStream)
+                    {
+                        list.Add(new NewEmployee2(sr.ReadLine()));
+                    }
+                    list.Sort();
+                    foreach (NewEmployee2 emp in list)
+                    {
+                        Console.WriteLine(emp);
+                    }
+                }
+            }
+            catch (IOException e)
+            {
+                Console.WriteLine("An error ocurred");
+                Console.WriteLine(e.Message);
+            }
 
         }
     }
