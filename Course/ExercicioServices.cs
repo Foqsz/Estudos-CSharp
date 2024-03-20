@@ -7,7 +7,7 @@ namespace Course
 {
     class ExercicioServices
     {
-        static void Main(string[] args)
+        static void Mainss(string[] args)
         {
 
             Console.WriteLine("Enter contract data");

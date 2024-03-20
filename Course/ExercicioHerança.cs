@@ -7,7 +7,7 @@ namespace Course
 {
     class ExercicioHerança
     {
-        static void Main(string[] args)
+        static void Mainx(string[] args)
         {
             string path = @"C:\Users\vinic\AppData\Local\Temp\Estudo.txt";
 
