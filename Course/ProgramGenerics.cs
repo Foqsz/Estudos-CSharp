@@ -5,9 +5,9 @@ using Course.Services;
 
 namespace Course
 {
-    internal class Program
+    internal class ProgramGeneric
     {
-        static void Main(string[] args)
+        static void Mainss(string[] args)
         {
             List<ProductGeneric> list = new List<ProductGeneric>(); //lista de numeros inteiros e instanciando lista vazia
                 
