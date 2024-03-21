@@ -12,7 +12,7 @@ internal class LogRecord
 
     public override bool Equals(object? obj)
     {
-        if (!(obj is LogRecord))
+        if (obj is LogRecord)
         {
             return false;
         }

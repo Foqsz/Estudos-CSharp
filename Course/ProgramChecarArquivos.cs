@@ -5,9 +5,9 @@ using Course.Entities;
 
 namespace Course
 {
-    internal class Program
+    internal class ProgramChecarArquivos
     {
-        static void Main(string[] args)
+        static void Mainsz(string[] args)
         {
             HashSet<LogRecord> set = new HashSet<LogRecord>();
 
