@@ -10,13 +10,13 @@ namespace Course
     {
         static void MainCZ(string[] args)
         {
-            double a = 10;
+           /* double a = 10;
             double b = 12; 
 
             BinaryNumaricOperationn op = CalculationDelegate.Max;
 
             double result = op.Invoke(a, b);
-            Console.WriteLine(result);
+            Console.WriteLine(result);*/
         } 
     }
 }
