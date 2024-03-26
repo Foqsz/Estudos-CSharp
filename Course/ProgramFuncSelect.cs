@@ -1,13 +1,13 @@
-﻿using Course.Entities; 
+﻿using Course.Entities;
 using System.Collections.Generic;
 using System;
 using System.Linq;
 
 namespace Course
-{ 
-    internal class Program
+{
+    internal class ProgramFuncSelect
     {
-        static void Main(string[] args)
+        static void MainFS(string[] args)
         {
             List<ProductPredicate> list = new List<ProductPredicate>();
 
@@ -16,7 +16,7 @@ namespace Course
             list.Add(new ProductPredicate("Tablet", 350.50));
             list.Add(new ProductPredicate("HD Case", 80.90));
 
-            Func<ProductPredicate, string> func = NameUpper;
+            Func<ProductPredicate, string> func = p => p.Name.ToUpper();
 
             List<string> result = list.Select(func).ToList();
 
@@ -24,6 +24,6 @@ namespace Course
             {
                 Console.WriteLine(s);
             }
-        } 
+        }
     }
 }
