@@ -42,7 +42,7 @@ namespace Course
                     // Filtra os objetos cujo salário seja superior ao limite fornecido,
                     // ordena-os por email e seleciona apenas os emails
                     var emails = list.Where(obj => obj.Salary > limit)
-                                     .OrderBy(obj => obj.Email)
+                                     .OrderBy(obj => obj.Email) 
                                      .Select(obj => obj.Email);
 
                     // Calcula a soma dos salários das pessoas cujo nome começa com 'M'
