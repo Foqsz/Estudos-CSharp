@@ -10,12 +10,11 @@ namespace Course.Models
     {
         public string Nome { get; set; }
         public int Idade { get; set; }
-        public string Cidade { get; set; }
-        public string Estado { get; set; } 
+        public string Email { get; set; }
 
-        public void Apresentar()
+        public virtual void Apresentar() //Polimorfismo (virtual), assim posso acessar o Apresentar() em outras classes que estão fazendo herança, através do método (public override).
         {
-            Console.WriteLine($"Olá meu nome é {Nome}, e tenho {Idade} anos. Moro em {Cidade} na {Estado}.");
+            Console.WriteLine($"Olá meu nome é {Nome}, e tenho {Idade} anos.");
         }
     }
 }
