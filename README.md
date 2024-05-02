@@ -10,6 +10,7 @@ Olá! 👋 Eu sou o Victor Vinicius Alves de Lima Souza, um entusiasta de progra
 ## Atualmente Estou Focado Em
 
 - **Curso na Udemy:** C# COMPLETO Programação Orientada a Objetos + Projetos
+- **Curso na Dio:** .NET Developer
   
 ## O Que Esperar
 
