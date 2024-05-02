@@ -11,7 +11,7 @@ namespace Course.Models
         public string Nome { get; set; }
         public int Idade { get; set; }
         public string Cidade { get; set; }
-        public string Estado { get; set; }
+        public string Estado { get; set; } 
 
         public void Apresentar()
         {
