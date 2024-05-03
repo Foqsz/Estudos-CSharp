@@ -10,6 +10,10 @@ namespace Course.Models
     { 
         public double Nota { get; set; }
 
+
+        public Student(string nome) : base(nome)
+        { 
+        } 
         public override void Apresentar()
         {
             Console.WriteLine($"Olá, meu nome é {Nome}, tenho {Idade} anos e sou um aluno nota {Nota}.");
