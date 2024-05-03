@@ -1,5 +1,6 @@
 ﻿using System;
 using Course.Entities;
+using Course.Interfaces;
 
 namespace Course.Services
 {

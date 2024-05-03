@@ -1,5 +1,4 @@
-﻿ 
-namespace Course.Services
+﻿namespace Course.Interfaces
 {
     internal interface IPrinter
     {

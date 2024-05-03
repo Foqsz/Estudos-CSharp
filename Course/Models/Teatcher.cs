@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Course.Models
 {
-    internal sealed class Teatcher : PessoaD
+    internal class Teatcher : PessoaD
     {
         public decimal Salario { get; set; }
 

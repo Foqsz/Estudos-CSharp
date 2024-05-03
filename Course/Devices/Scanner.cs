@@ -1,6 +1,6 @@
 ﻿using System;
 using Course.Entities;
-using Course.Services;
+using Course.Interfaces;
 
 namespace Course.Devices
 {

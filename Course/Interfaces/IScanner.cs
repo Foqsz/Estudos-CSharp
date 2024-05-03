@@ -1,6 +1,4 @@
-﻿ 
-
-namespace Course.Services
+﻿namespace Course.Interfaces
 {
     internal interface IScanner
     {

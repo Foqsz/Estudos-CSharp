@@ -1,6 +1,6 @@
 ﻿using Course.Entities.Enums;
 
-namespace Course.Services
+namespace Course.Interfaces
 {
     internal interface IShape
     {

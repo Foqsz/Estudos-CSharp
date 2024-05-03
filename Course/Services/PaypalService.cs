@@ -1,4 +1,6 @@
-﻿namespace Course.Services
+﻿using Course.Interfaces;
+
+namespace Course.Services
 {
     class PaypalService : IOnlinePaymentService
     {

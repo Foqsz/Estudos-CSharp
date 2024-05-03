@@ -4,10 +4,10 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Course.Services
+namespace Course.Interfaces
 {
     interface ITaxService
     {
-        public double Tax(Double amount);
+        public double Tax(double amount);
     }
 }
