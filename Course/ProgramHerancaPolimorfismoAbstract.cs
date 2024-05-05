@@ -3,17 +3,17 @@ using Course.Models;
 
 namespace Course
 {
-    internal class ProgramHerancaPolimorfismoAbstract
+    public class ProgramHerancaPolimorfismoAbstract
     {
-        static void MainxAbsx(string[] args)
+        static void MainxxAbsx(string[] args)
         {
-            PessoaD PessoaP1 = new PessoaD(); //Iniciar um objeto.
+            PessoaD PessoaP1 = new PessoaD("Vinicius"); //Iniciar um objeto.
             PessoaP1.Nome = "Victor";
             PessoaP1.Idade = 20;
             PessoaP1.Apresentar();
             Console.WriteLine("-------------------------------");
 
-            Student aluno = new Student();
+            Student aluno = new Student("Victor");
             aluno.Nome = "Vinicius";
             aluno.Idade = 20;
             aluno.Email = "foqs@gmail.com";
@@ -21,7 +21,7 @@ namespace Course
             aluno.Apresentar();
             Console.WriteLine("-------------------------------");
 
-            Teatcher professor = new Teatcher();
+            Teatcher professor = new Teatcher("Pedro");
             professor.Nome = "Pedro";
             professor.Idade = 35;
             professor.Salario = 3700;
