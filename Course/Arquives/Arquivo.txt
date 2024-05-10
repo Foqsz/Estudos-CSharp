@@ -1,0 +1,12 @@
+
+1. C# (pronuncia-se "C sharp") é uma linguagem de programação desenvolvida pela Microsoft como parte da plataforma .NET.
+2. Foi criada por Anders Hejlsberg e sua equipe durante o final da década de 1990.
+3. C# é uma linguagem orientada a objetos, fortemente tipada e de propósito geral.
+4. Ela é frequentemente usada para desenvolver aplicativos para Windows, incluindo aplicativos de desktop, jogos, aplicativos web e muito mais.
+5. O código fonte em C# é compilado para a Common Intermediate Language (CIL), que é executada na Common Language Runtime (CLR).
+6. Uma das características distintivas do C# é sua sintaxe semelhante à linguagem C/C++, o que facilita a transição para os programadores que já estão familiarizados com essas linguagens.
+7. C# suporta programação assíncrona e paralela através de palavras-chave como "async" e "await", o que é útil para desenvolver aplicativos que requerem operações intensivas de E/S.
+8. A linguagem C# é continuamente atualizada pela Microsoft, com novos recursos sendo adicionados regularmente. Por exemplo, as versões mais recentes introduziram padrões de programação funcional e melhorias na inferência de tipos.
+9. C# tem uma ampla comunidade de desenvolvedores e uma grande quantidade de recursos de aprendizado disponíveis, incluindo documentação oficial, tutoriais online, livros e cursos.
+10. Além de ser usada para desenvolvimento de software para Windows, C# também é usada em outras plataformas, como Xamarin (para desenvolvimento de aplicativos móveis multiplataforma) e Unity (para desenvolvimento de jogos).
+
