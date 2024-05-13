@@ -4,9 +4,9 @@ using System.Globalization;
 
 namespace Course
 {
-    internal class Program
+    internal class ProgramDESCONSTRUCT
     {
-        static void Main(string[] args)
+        static void MainDESCONSTRUCT(string[] args)
         {
             PessoaDesconstructor p1 = new PessoaDesconstructor("Victor", "Vinicius");
 
