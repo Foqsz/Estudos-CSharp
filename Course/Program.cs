@@ -10,9 +10,12 @@ namespace Course
         {
             PessoaDesconstructor p1 = new PessoaDesconstructor("Victor", "Vinicius");
 
-            (string Nome, string sobreNome) = p1;
+        int result = 0;
+        int prevValue = 0;
 
-            Console.WriteLine($"{Nome} {sobreNome}");
+        foreach (char c in s)
+        {
+            int currentValue = romanToInt[c];
 
 
         }
