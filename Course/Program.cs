@@ -1,23 +1,42 @@
-﻿using Course.Models;
-using System;
-using System.Globalization;
+﻿using System;
+using System.Linq;
 
 namespace Course
 {
-    internal class Program
+    class ProgramBeecrowd
     {
         static void Main(string[] args)
         {
-            PessoaDesconstructor p1 = new PessoaDesconstructor("Victor", "Vinicius");
+            double[] entrada = Console.ReadLine()
+                                      .Split(' ')
+                                      .Select(double.Parse)
+                                      .ToArray();
 
-        int result = 0;
-        int prevValue = 0;
+            ProgramBeecrowd p = new ProgramBeecrowd();
+            double media = p.calcularMedia(entrada);
 
-        foreach (char c in s)
+            Console.WriteLine($"MEDIA = {media:F1}");
+        }
+
+        public double calcularMedia(double[] nums)
         {
-            int currentValue = romanToInt[c];
+            double total = 0;
+            int validos = 0;
 
+            for (int i = 0; i < nums.Length; i++)
+            {
+                if (nums[i] < 0 || nums[i] > 10)
+                {
+                    Console.WriteLine("nota invalida");
+                }
+                else
+                {
+                    total += nums[i];
+                    validos++;
+                }
+            }
 
+            return validos > 0 ? total / validos : 0;
         }
     }
 }
