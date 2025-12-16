@@ -1,0 +1,68 @@
+﻿<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Victor Vinicius</title>
+    <style>
+        body {
+            background-color: blue;
+        }
+
+        .flex {
+            display: flex;
+            font-family: Tahoma;
+        }
+
+        .item {
+            width: 80px;
+            height: 80px;
+            background-color: blueviolet;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            margin: 10px;
+            padding: 10px;
+        }
+
+            .item:hover {
+                background-color: red;
+            }
+
+            .item:first-child:hover, .item:last-child:hover {
+                background-color: green;
+            }
+
+        input:focus {
+            color: red;
+            background: #808080;
+        }
+
+        @media (max-width: 450px) {
+            body {
+                background-color: green;
+            }
+           
+            .flex{
+                flex-direction: column;
+            }
+        }
+    </style>
+</head>
+<body>
+    <hr />
+    <h2>Flexbox</h2>
+    <div class="flex">
+        <div class="item">a</div>
+        <div class="item">b</div>
+        <div class="item">c</div>
+        <div class="item">d</div>
+        <div class="item">e</div>
+    </div>
+    <div>
+        <input />
+    </div>
+</body>
+</html>

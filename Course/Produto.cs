@@ -16,6 +16,7 @@ namespace Course
         private string _nome;
         public double Preco { get; private set; }
         public int Quantidade { get; private set; }
+        public int Count { get; set; }  
         
         public Produto()
         {

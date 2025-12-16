@@ -4,9 +4,9 @@ using Newtonsoft.Json;
 
 namespace Course
 {
-    class Program
+    class ProgramJSON
     {
-        static void Main(string[] args)
+        static void MainJSON(string[] args)
         {
             string conteudoLista = File.ReadAllText("C:\\Users\\vinic\\Documents\\Projetos Estudo\\Course\\Course\\Arquives/vendas.json");
 

@@ -2,7 +2,7 @@ using System;
 
 class Program
 {
-    static void Main()
+    static void MainClassMath()
     {
         // 1. Arredondamento
         double num = 5.65;

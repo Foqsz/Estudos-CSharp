@@ -9,7 +9,7 @@ namespace Course
     struct Point
     {
         public double X;
-        public double Y;
+        public double Y; 
 
         public override string ToString()
         {

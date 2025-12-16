@@ -5,9 +5,9 @@ using System.Linq;
 
 namespace Course
 {
-    class Program
+    class ProgramCalculadora
     {
-        static void Main(string[] args)
+        static void MainC(string[] args)
         {
             Console.WriteLine("________________________________");
             Console.WriteLine("###### Calculadora de IMC ######");
