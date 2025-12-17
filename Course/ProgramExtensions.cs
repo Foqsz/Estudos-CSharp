@@ -4,18 +4,13 @@ using System.Linq;
 
 namespace Course
 {
-    class ProgramBeecrowd
+    class ProgramExntensions
     {
-        static void Main(string[] args)
+        static void MainExntesion(string[] args)
         {
             Console.WriteLine("DEMONSTRAÇÃO EXTENSION MEMBERS (C# 14 / .NET 10)");
             Console.WriteLine("\nCriando objeto p : Maria com 20 anos");
             var p = new Pessoa { Name = "Maria", Idade = 20 };
-
-            if(p.isAdult)
-                Console.WriteLine($"{p.Name} é maior de idade");
-            else
-                Console.WriteLine($"{p.Name} não é maior de idade");
 
             Console.WriteLine("Metodo de extensão Descibre");
             Console.WriteLine(p.Describe());
