@@ -15,5 +15,10 @@ public static class StringExtensions
         }
 
         public int Tamanho => value.IsEmpty() ? 0 : value!.Length;
+
+        public string? NullIfEmpty()
+        {
+            return value.IsEmpty() ? null : value;
+        }
     }
 }
