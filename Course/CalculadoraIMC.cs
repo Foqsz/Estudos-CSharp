@@ -39,16 +39,20 @@ namespace Course
         static string CalcularIMC(double peso, double altura)
         {
             double IMC = peso / (altura * altura);
+            const double IMC_AbaixoDoPeso = 18.5;
+            const double IMC_Normal = 24.9;
+            const double IMC_Sobrepeso = 29.9;
+            const double IMC_Obesidade = 30.0;
 
-            if (IMC < 18.5)
+            if (IMC < IMC_AbaixoDoPeso)
             {
                 return $"Seu IMC é {IMC.ToString("F2", CultureInfo.InvariantCulture)} e você está Abaixo do Peso.";
             }
-            else if (IMC >= 18.5 && IMC <= 24.9)
+            else if (IMC >= IMC_AbaixoDoPeso && IMC <= IMC_Normal)
             {
                 return $"Seu IMC é {IMC.ToString("F2", CultureInfo.InvariantCulture)} e você está com o Peso Normal.";
             }
-            else if (IMC >= 25.0 && IMC <= 29.9)
+            else if (IMC >= IMC_Normal && IMC <= IMC_Sobrepeso)
             {
                 return $"Seu IMC é {IMC.ToString("F2", CultureInfo.InvariantCulture)} e você está com Sobrepeso.";
             }
